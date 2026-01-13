@@ -7,8 +7,8 @@ CREATE TABLE template.persons(
     last_name varchar(100) NOT NULL,
     date_of_birth date,
     gender varchar(20) check(gender in ('male', 'female', 'other', 'unknown')) DEFAULT 'unknown' NOT NULL,
-    marital_status varchar(20) check(gender in ('single', 'married', 'divorced', 'widowed')) DEFAULT 'single' NOT NULL,
-    life_status varchar(20) check(gender in ('alive', 'deceased')) DEFAULT 'alive' NOT NULL,
+    marital_status varchar(20) check(marital_status in ('single', 'married', 'divorced', 'widowed')) DEFAULT 'single' NOT NULL,
+    life_status varchar(20) check(life_status in ('alive', 'deceased')) DEFAULT 'alive' NOT NULL,
     nationality varchar(100) DEFAULT 'Ugandan',
 
     primary_phone varchar(50) NOT NULL,
